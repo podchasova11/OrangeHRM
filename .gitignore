@@ -1,0 +1,9 @@
+.idea/
+.idea/dbnavigator.xml
+.idea/jpa-buddy.xml
+.venv/
+.pytest_cache
+
+__pycache__
+ libs/__pycache__
+ pages/__pycache__
