@@ -3,6 +3,7 @@ import allure
 from data.links import Links
 from config.base_page import BasePage
 
+
 class LoginPage(BasePage):
 
     PAGE_URL = Links.LOGIN_PAGE

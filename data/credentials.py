@@ -11,4 +11,5 @@ class Credentials:
         PASSWORD = os.getenv("PASSWORD")
 
     elif os.environ["STAGE"] == "prod":
-        ...
+        LOGIN = os.getenv("LOGIN")
+        PASSWORD = os.getenv("PASSWORD")

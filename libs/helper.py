@@ -30,7 +30,7 @@ class Helper:
     def find(self, locator):
         return self.driver.find_element("xpath", locator)
 
-    # ? Wait methods
+    # Wait methods
 
     def wait_for_visibility(self, locator: str):
         """

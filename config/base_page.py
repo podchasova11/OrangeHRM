@@ -1,5 +1,5 @@
+from libs.helper import Helper
 
 
-
-class BasePage:
+class BasePage(Helper):
     ...
