@@ -5,11 +5,12 @@ import os
 
 
 class Credentials:
+    ...
 
-    if os.environ["STAGE"] == "qa":
-        LOGIN = os.getenv("LOGIN")
-        PASSWORD = os.getenv("PASSWORD")
-
-    elif os.environ["STAGE"] == "prod":
-        LOGIN = os.getenv("LOGIN")
-        PASSWORD = os.getenv("PASSWORD")
+    # if os.environ["STAGE"] == "qa":
+    #     LOGIN = os.getenv("LOGIN")
+    #     PASSWORD = os.getenv("PASSWORD")
+    #
+    # elif os.environ["STAGE"] == "prod":
+    #     LOGIN = os.getenv("LOGIN")
+    #     PASSWORD = os.getenv("PASSWORD")
