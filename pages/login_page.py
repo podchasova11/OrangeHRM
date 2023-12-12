@@ -24,4 +24,4 @@ class LoginPage(BasePage):
 
     @allure.step("Enter username")
     def click_login_button(self):
-        self.find(self.LOGIN_BUTTON).klick()
+        self.find(self.LOGIN_BUTTON).click()
