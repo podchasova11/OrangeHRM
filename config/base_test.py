@@ -9,7 +9,7 @@ from pages.login_page import LoginPage
 class BaseTest:
 
     def setup(self):
-        self.login_page = LoginPage(self.driver)
+    self.login_page = LoginPage(self.driver)
 
 
     # def setup(self):
