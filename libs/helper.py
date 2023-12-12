@@ -15,10 +15,14 @@ class Helper:
 
     def __init__(self, driver):
         self.driver: WebDriver = driver
+        self.driver.get("https://opensource-demo.orangehrmlive.com/web/index.php")
         self.wait = WebDriverWait(self.driver, timeout=10, poll_frequency=1)
         self.action = ActionChains(self.driver)
 
-    # ? Allure methods
+    def find(self, locator):
+        return self.driver.find_element("xpath", locator)
+
+    #  Allure methods
 
     def screenshot(self, screenshot_name):
         allure.attach(
@@ -27,10 +31,7 @@ class Helper:
             attachment_type=AttachmentType.PNG
         )
 
-    def find(self, locator):
-        return self.driver.find_element("xpath", locator)
-
-    # Wait methods
+     # Wait methods
 
     def wait_for_visibility(self, locator: str):
         """
@@ -56,7 +57,7 @@ class Helper:
         """
         return self.wait.until(EC.element_to_be_clickable(("xpath", locator)))
 
-    # ? Action method
+    #  Action method
 
     def save_cookies(self, cookies_name):
         pickle.dump(self.driver.get_cookies(), open(f"{os.getcwd()}/temporary/cookies/{cookies_name}.pkl", "wb"))
@@ -68,7 +69,7 @@ class Helper:
             self.driver.add_cookie(cookie)
         self.driver.refresh()
 
-    # ? Scrolls
+    #  Scrolls
 
     def scroll_by(self, x, y):
         self.driver.execute_script(f"window.scrollTo({x}, {y})")
