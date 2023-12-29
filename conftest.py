@@ -56,13 +56,13 @@ def browser_factory():
     return create_browser
 
 
-# @pytest.fixture(autouse=True, scope="class")
-# def get_driver(request):
-#     # service = Service(ChromeDriverManager().install())
-#     driver = webdriver.Chrome()
-#     request.cls.driver = driver
-#     yield
-#     driver.quit()
+@pytest.fixture(autouse=True, scope="class")
+def get_driver(request):
+    # service = Service(ChromeDriverManager().install())
+    driver = webdriver.Chrome()
+    request.cls.driver = driver
+    yield
+    driver.quit()
 
 
 # import time
