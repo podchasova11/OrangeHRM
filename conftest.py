@@ -65,10 +65,10 @@
 #     driver.quit()
 
 
-import time
+# import time
 
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
+# from selenium import webdriver
+# from selenium.webdriver.chrome.options import Options
 
 options = Options
 options.add_argument("--disable-blink-features=AutomationControlled")
