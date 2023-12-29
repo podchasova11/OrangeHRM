@@ -70,9 +70,9 @@ def get_driver(request):
     driver.quit()
 
 
-options = Options
-options.add_argument("--disable-blink-features=AutomationControlled")
-options.add_argument("--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36")
-driver = webdriver.Chrome(options=options)
+# options = Options
+# options.add_argument("--disable-blink-features=AutomationControlled")
+# options.add_argument("--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36")
+# driver = webdriver.Chrome(options=options)
 
-driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
+# driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
