@@ -34,26 +34,26 @@ def get_driver(request):
         driver.quit()
 
 
-# def create_browser(driver="chrome"):
-#     if driver == "chrome":
-#         options = Options()
-#         options.add_argument("--incognito")
-#         options.add_argument("--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36")
-#         options.add_argument("--window-size=1920,1080")
-#         options.add_argument("--disable-blink-features=AutomationControlled")
-#         driver = webdriver.Chrome(options=options)
-#         return driver
-#     elif driver == "firefox":
-#         driver = webdriver.Firefox()
-#         return driver
-#     elif driver == "safari":
-#         driver = webdriver.Safari()
-#         return driver
-#
-#
-# @pytest.fixture()
-# def browser_factory():
-#     return create_browser
+def create_browser(driver="chrome"):
+    if driver == "chrome":
+        options = Options()
+        options.add_argument("--incognito")
+        options.add_argument("--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36")
+        options.add_argument("--window-size=1920,1080")
+        options.add_argument("--disable-blink-features=AutomationControlled")
+        driver = webdriver.Chrome(options=options)
+        return driver
+    elif driver == "firefox":
+        driver = webdriver.Firefox()
+        return driver
+    elif driver == "safari":
+        driver = webdriver.Safari()
+        return driver
+
+
+@pytest.fixture()
+def browser_factory():
+    return create_browser
 
 
 # @pytest.fixture(autouse=True, scope="class")
