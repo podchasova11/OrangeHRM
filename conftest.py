@@ -6,6 +6,11 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 
+# import time
+
+# from selenium import webdriver
+# from selenium.webdriver.chrome.options import Options
+
 
 @pytest.fixture(autouse=True, scope="function")
 def driver(request):
@@ -64,11 +69,6 @@ def get_driver(request):
     yield
     driver.quit()
 
-
-# import time
-
-# from selenium import webdriver
-# from selenium.webdriver.chrome.options import Options
 
 options = Options
 options.add_argument("--disable-blink-features=AutomationControlled")
